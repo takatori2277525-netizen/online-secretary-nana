@@ -1,0 +1,392 @@
+:root {
+  --white: #ffffff;
+  --paper: #fcfbf8;
+  --navy: #1c2a44;
+  --navy-soft: #4b586c;
+  --beige: #efe8d9;
+  --beige-deep: #c9b48e;
+  --line: #e3ded2;
+  --text: #33415a;
+  --text-muted: #6e7a8a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--white);
+  color: var(--text);
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 300;
+  line-height: 1.9;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Noto Serif JP", serif;
+  font-weight: 500;
+  color: var(--navy);
+  letter-spacing: 0.02em;
+}
+
+.page {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: min(14vh, 110px) 8vw 90px;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.page + .page {
+  border-top: 1px solid var(--line);
+}
+
+.folio {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 34px;
+}
+
+.folio-center {
+  justify-content: center;
+}
+
+.folio .num {
+  font-family: "Noto Serif JP", serif;
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  color: var(--beige-deep);
+}
+
+.folio .rule {
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
+.folio .cap {
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+h2.title {
+  font-size: clamp(24px, 5.4vw, 32px);
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+p.lead {
+  font-size: 16px;
+  color: var(--text);
+  font-weight: 300;
+  margin-bottom: 16px;
+}
+
+.hero {
+  min-height: 100vh;
+  padding-top: 0;
+  justify-content: center;
+  text-align: left;
+}
+
+.hero .eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.32em;
+  color: var(--beige-deep);
+  margin-bottom: 26px;
+}
+
+.hero h1 {
+  font-size: clamp(30px, 8vw, 44px);
+  line-height: 1.55;
+  margin-bottom: 26px;
+}
+
+.hero .sub {
+  font-size: 16px;
+  color: var(--navy-soft);
+  line-height: 2;
+  margin-bottom: 42px;
+}
+
+.photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background: var(--beige);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.photo-wide {
+  aspect-ratio: 4 / 5;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.field-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 24px;
+  margin: 26px 0 32px;
+}
+
+.field-list li {
+  font-size: 15px;
+  color: var(--navy-soft);
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+}
+
+.quote-line {
+  font-family: "Noto Serif JP", serif;
+  font-size: 19px;
+  color: var(--navy);
+  margin: 30px 0 4px;
+  line-height: 1.9;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 8px;
+}
+
+.card {
+  border: 1px solid var(--line);
+  padding: 26px 18px;
+  background: var(--paper);
+}
+
+.card svg {
+  width: 26px;
+  height: 26px;
+  color: var(--navy);
+  margin-bottom: 16px;
+}
+
+.card .num {
+  font-family: "Noto Serif JP", serif;
+  font-size: 12px;
+  color: var(--beige-deep);
+  letter-spacing: 0.1em;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.card h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.pull {
+  border-left: 2px solid var(--beige-deep);
+  padding-left: 22px;
+  margin: 32px 0;
+}
+
+.pull p {
+  font-family: "Noto Serif JP", serif;
+  font-size: 18px;
+  color: var(--navy);
+  line-height: 1.9;
+}
+
+.promise {
+  background: var(--paper);
+}
+
+.values {
+  list-style: none;
+  margin: 26px 0 40px;
+}
+
+.values li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 15.5px;
+  color: var(--navy-soft);
+}
+
+.values li .dash {
+  width: 18px;
+  height: 1px;
+  background: var(--beige-deep);
+  flex-shrink: 0;
+}
+
+.closing-copy {
+  font-family: "Noto Serif JP", serif;
+  font-size: 18px;
+  line-height: 2.1;
+  color: var(--navy);
+  text-align: center;
+  padding-top: 10px;
+}
+
+.closing-copy .em {
+  color: var(--beige-deep);
+}
+
+.page.tinted {
+  background: var(--beige);
+}
+
+.page.tinted + .page {
+  border-top: none;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 28px 0 36px;
+}
+
+.service {
+  border: 1px solid rgba(28, 42, 68, 0.12);
+  background: rgba(255, 255, 255, 0.36);
+  padding: 20px 16px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--navy-soft);
+  letter-spacing: 0.03em;
+}
+
+.service span {
+  display: block;
+  font-size: 23px;
+  margin-bottom: 8px;
+}
+
+.check-list {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.check-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 15px 0;
+  font-size: 15.5px;
+  color: var(--navy);
+  border-bottom: 1px solid rgba(28, 42, 68, 0.1);
+}
+
+.check-list svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--navy);
+}
+
+.final {
+  text-align: center;
+  min-height: 100vh;
+}
+
+.final .mark {
+  width: 44px;
+  height: 1px;
+  background: var(--beige-deep);
+  margin: 0 auto 34px;
+}
+
+.final h2 {
+  font-size: clamp(24px, 6vw, 30px);
+  margin-bottom: 30px;
+}
+
+.final p {
+  font-size: 15.5px;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.final .invite {
+  font-family: "Noto Serif JP", serif;
+  font-size: 17px;
+  color: var(--navy);
+  margin: 36px 0 34px;
+  line-height: 2;
+}
+
+.cta {
+  display: inline-block;
+  border: 1px solid var(--navy);
+  color: var(--navy);
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  padding: 16px 46px;
+  margin-top: 34px;
+  text-decoration: none;
+  font-family: "Noto Sans JP", sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.cta:hover {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.cta-note {
+  margin-top: 18px;
+  font-size: 12px !important;
+}
+
+footer {
+  text-align: center;
+  padding: 50px 8vw 60px;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+}
+
+@media (max-width: 480px) {
+  .field-list,
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page {
+    padding: 80px 7vw 70px;
+  }
+}
